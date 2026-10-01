@@ -1,0 +1,1851 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Girma Mengistu — Frontend Developer & UI/UX Designer</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Fira+Code:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+</head>
+<body>
+
+<!-- Scroll Progress Bar -->
+<div id="scroll-progress"></div>
+
+<!-- Cursor Glow -->
+<div id="cursor-glow"></div>
+
+<!-- Mobile Menu Overlay -->
+<div id="mobile-overlay" onclick="closeMobileMenu()"></div>
+
+<!-- Mobile Nav -->
+<header id="mobile-header">
+  <a href="#hero" class="mobile-logo">GM</a>
+  <button id="hamburger" onclick="toggleMobileMenu()" aria-label="Menu">
+    <span></span><span></span><span></span>
+  </button>
+</header>
+<nav id="mobile-nav">
+  <ol>
+    <li><a href="#about" onclick="closeMobileMenu()"><span>01.</span> About</a></li>
+    <li><a href="#experience" onclick="closeMobileMenu()"><span>02.</span> Experience</a></li>
+    <li><a href="#projects" onclick="closeMobileMenu()"><span>03.</span> Projects</a></li>
+    <li><a href="#casestudies" onclick="closeMobileMenu()"><span>04.</span> Case Studies</a></li>
+    <li><a href="#contact" onclick="closeMobileMenu()"><span>05.</span> Contact</a></li>
+  </ol>
+  <a href="#" class="btn-outline" download>Resume</a>
+</nav>
+
+<!-- Main Layout -->
+<div id="app">
+
+  <!-- ===== LEFT PANEL ===== -->
+  <aside id="left-panel">
+
+    <!-- Availability Badge -->
+    <div class="availability-badge">
+      <span class="pulse-dot"></span>
+      Open to work
+    </div>
+
+    <!-- Name & Title -->
+    <div class="left-intro">
+      <h1 class="site-name">Girma<br>Mengistu</h1>
+      <h2 class="site-role">Frontend Developer<br>&amp; UI/UX Designer</h2>
+      <p class="site-tagline">I build fast, accessible, and visually stunning digital experiences.</p>
+    </div>
+
+    <!-- Section Nav -->
+    <nav id="desktop-nav">
+      <ul>
+        <li><a href="#about" class="nav-link" data-section="about"><span class="nav-line"></span><span class="nav-label">About</span></a></li>
+        <li><a href="#experience" class="nav-link" data-section="experience"><span class="nav-line"></span><span class="nav-label">Experience</span></a></li>
+        <li><a href="#projects" class="nav-link" data-section="projects"><span class="nav-line"></span><span class="nav-label">Projects</span></a></li>
+        <li><a href="#casestudies" class="nav-link" data-section="casestudies"><span class="nav-line"></span><span class="nav-label">Case Studies</span></a></li>
+        <li><a href="#contact" class="nav-link" data-section="contact"><span class="nav-line"></span><span class="nav-label">Contact</span></a></li>
+      </ul>
+    </nav>
+
+    <!-- Social Links -->
+    <div class="social-links">
+      <a href="https://github.com" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
+      <a href="https://linkedin.com" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+      <a href="https://twitter.com" target="_blank" aria-label="Twitter"><i class="fab fa-x-twitter"></i></a>
+      <a href="https://dribbble.com" target="_blank" aria-label="Dribbble"><i class="fab fa-dribbble"></i></a>
+      <a href="mailto:girma@example.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
+    </div>
+
+    <!-- CTA Buttons -->
+    <div class="left-cta">
+      <a href="#" class="btn-primary" download><i class="fas fa-download"></i> Download CV</a>
+      <a href="mailto:girma@example.com" class="btn-hire"><i class="fas fa-paper-plane"></i> Hire Me</a>
+    </div>
+
+  </aside>
+  <!-- ===== END LEFT PANEL ===== -->
+
+  <!-- ===== RIGHT SCROLL PANEL ===== -->
+  <main id="right-panel">
+
+    <!-- ===== HERO SECTION ===== -->
+    <section id="hero">
+      <div class="hero-content">
+        <p class="hero-greeting"><span class="fira">Hi, my name is</span></p>
+        <h1 class="hero-name">Girma Mengistu.</h1>
+        <h2 class="hero-sub">I build things for the web.</h2>
+        <p class="hero-desc">
+          I'm a <strong>Frontend Developer &amp; UI/UX Designer</strong> based in Addis Ababa, Ethiopia.
+          I specialize in crafting accessible, pixel-perfect interfaces and immersive digital experiences
+          — from elegant landing pages to complex web applications.
+        </p>
+        <div class="hero-buttons">
+          <a href="#projects" class="btn-primary"><i class="fas fa-rocket"></i> View My Work</a>
+          <a href="mailto:girma@example.com" class="btn-hire"><i class="fas fa-paper-plane"></i> Hire Me</a>
+          <a href="#" class="btn-outline" download><i class="fas fa-download"></i> Download CV</a>
+        </div>
+        <div class="hero-stats">
+          <div class="stat-item">
+            <span class="stat-num" data-target="4">0</span><span class="stat-plus">+</span>
+            <span class="stat-label">Years Exp.</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-num" data-target="50">0</span><span class="stat-plus">k+</span>
+            <span class="stat-label">Users Reached</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-num" data-target="40">0</span><span class="stat-plus">+</span>
+            <span class="stat-label">Projects Done</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-num" data-target="5">0</span><span class="stat-plus"></span>
+            <span class="stat-label">Countries</span>
+          </div>
+        </div>
+      </div>
+      <div class="hero-scroll-hint">
+        <span class="fira">scroll down</span>
+        <i class="fas fa-chevron-down bounce"></i>
+      </div>
+    </section>
+    <!-- ===== END HERO ===== -->
+
+    <!-- ===== ABOUT SECTION ===== -->
+    <section id="about">
+      <h2 class="section-heading"><span class="fira section-num">01.</span> About Me <span class="section-line"></span></h2>
+      <div class="about-grid">
+        <div class="about-text">
+          <p>
+            Hello! I'm Girma — a passionate Frontend Developer and UI/UX Designer from
+            <strong>Woldia, Ethiopia</strong>. I love creating digital spaces where design meets
+            engineering, and every pixel tells a story.
+          </p>
+          <p>
+            My journey started with curiosity about how websites worked. That curiosity turned into a
+            career spanning over 4 years, working with startups, agencies, and enterprise teams across
+            12 countries. I thrive at the intersection of <em>beautiful design</em> and <em>clean code</em>.
+          </p>
+          <p>
+            When I'm not coding, you'll find me sketching UI concepts, mentoring junior developers,
+            exploring generative AI tools, or hiking the scenic trails around Woldia.
+          </p>
+          <p>Here are a few technologies I've been working with recently:</p>
+          <ul class="skills-list">
+            <li><i class="fas fa-caret-right"></i> React / Next.js</li>
+            <li><i class="fas fa-caret-right"></i> TypeScript</li>
+            <li><i class="fas fa-caret-right"></i> Tailwind CSS</li>
+            <li><i class="fas fa-caret-right"></i> Node.js / Express</li>
+            <li><i class="fas fa-caret-right"></i> Figma / Adobe XD</li>
+            <li><i class="fas fa-caret-right"></i> HTML:5</li>
+          </ul>
+        </div>
+        <div class="about-image-wrapper">
+          <div class="about-img-frame">
+            <img
+              src="C:\Users\Girma\Desktop\mike\photo_2026-07-12_02-55-53.jpg"
+              alt="Girma Mengistu"
+              class="about-photo"
+            />
+            <div class="img-overlay"></div>
+          </div>
+          <div class="about-img-border"></div>
+        </div>
+      </div>
+
+      <!-- Skills Proficiency Bars -->
+      <div class="skills-section">
+        <h3 class="skills-title fira">// Proficiency</h3>
+        <div class="skill-bars">
+          <div class="skill-bar-item">
+            <div class="skill-bar-label"><span>React / Next.js</span><span class="skill-pct">94%</span></div>
+            <div class="skill-bar-track"><div class="skill-bar-fill" data-width="94"></div></div>
+          </div>
+          <div class="skill-bar-item">
+            <div class="skill-bar-label"><span>UI/UX Design (Figma)</span><span class="skill-pct">90%</span></div>
+            <div class="skill-bar-track"><div class="skill-bar-fill" data-width="90"></div></div>
+          </div>
+          <div class="skill-bar-item">
+            <div class="skill-bar-label"><span>TypeScript</span><span class="skill-pct">88%</span></div>
+            <div class="skill-bar-track"><div class="skill-bar-fill" data-width="88"></div></div>
+          </div>
+          <div class="skill-bar-item">
+            <div class="skill-bar-label"><span>Node.js / Backend</span><span class="skill-pct">80%</span></div>
+            <div class="skill-bar-track"><div class="skill-bar-fill" data-width="80"></div></div>
+          </div>
+          <div class="skill-bar-item">
+            <div class="skill-bar-label"><span>Html</span><span class="skill-pct">75%</span></div>
+            <div class="skill-bar-track"><div class="skill-bar-fill" data-width="75"></div></div>
+          </div>
+        </div>
+        <div class="skill-chips">
+          <span>HTML5</span><span>CSS3</span><span>JavaScript</span><span>TypeScript</span>
+          <span>React</span><span>Next.js</span><span>Vue.js</span><span>Tailwind</span>
+          <span>Node.js</span><span>Express</span><span>MongoDB</span><span>PostgreSQL</span>
+          <span>Figma</span><span>Adobe XD</span><span>Git</span><span>Docker</span>
+        </div>
+      </div>
+    </section>
+    <!-- ===== END ABOUT ===== -->
+
+    <!-- ===== EXPERIENCE SECTION ===== -->
+    <section id="experience">
+      <h2 class="section-heading"><span class="fira section-num">02.</span> Experience <span class="section-line"></span></h2>
+      <div class="exp-tabs">
+        <div class="exp-tab-btns">
+          <button class="exp-tab-btn active" data-tab="0">Habesha Tech</button>
+          <button class="exp-tab-btn" data-tab="1">AfriCode Labs</button>
+          <button class="exp-tab-btn" data-tab="2">Nile Digital</button>
+          <button class="exp-tab-btn" data-tab="3">Freelance</button>
+        </div>
+        <div class="exp-tab-panels">
+          <div class="exp-panel active">
+            <h3>Senior Frontend Developer <span class="exp-company">@ Habesha Tech</span></h3>
+            <p class="exp-range fira">Jan 2022 — Present</p>
+            <ul>
+              <li>Led frontend architecture for a SaaS platform serving 30k+ monthly active users.</li>
+              <li>Reduced page load time by 42% via code splitting, lazy loading, and image optimization.</li>
+              <li>Mentored a team of 5 junior developers and conducted weekly code reviews.</li>
+              <li>Built a reusable component library used across 4 products.</li>
+            </ul>
+            <div class="exp-tags"><span>React</span><span>TypeScript</span><span>Next.js</span><span>AWS</span></div>
+          </div>
+          <div class="exp-panel">
+            <h3>UI/UX Designer &amp; Developer <span class="exp-company">@ AfriCode Labs</span></h3>
+            <p class="exp-range fira">Mar 2020 — Dec 2021</p>
+            <ul>
+              <li>Designed and built end-to-end user interfaces for 10+ client projects.</li>
+              <li>Conducted user research and usability testing, improving conversion rates by 28%.</li>
+              <li>Created a cross-platform design system in Figma used by 3 development teams.</li>
+              <li>Collaborated with backend engineers on GraphQL API integration.</li>
+            </ul>
+            <div class="exp-tags"><span>Figma</span><span>Vue.js</span><span>GraphQL</span><span>Storybook</span></div>
+          </div>
+          <div class="exp-panel">
+            <h3>Frontend Developer <span class="exp-company">@ Nile Digital</span></h3>
+            <p class="exp-range fira">Jun 2018 — Feb 2020</p>
+            <ul>
+              <li>Built responsive landing pages and marketing sites for e-commerce clients.</li>
+              <li>Integrated payment gateways (Stripe, Telebirr) and third-party APIs.</li>
+              <li>Improved website accessibility to WCAG 2.1 AA compliance.</li>
+              <li>Worked in agile sprints delivering features on tight deadlines.</li>
+            </ul>
+            <div class="exp-tags"><span>JavaScript</span><span>SCSS</span><span>Webpack</span><span>REST APIs</span></div>
+          </div>
+          <div class="exp-panel">
+            <h3>Freelance Designer &amp; Developer <span class="exp-company">@ Self-employed</span></h3>
+            <p class="exp-range fira">2017 — Present (part-time)</p>
+            <ul>
+              <li>Delivered 40+ projects for clients across Ethiopia, Kenya, Netherlands, and Canada.</li>
+              <li>Services include branding, UI design, website development, and consulting.</li>
+              <li>Maintained 5-star rating with 98% client satisfaction on Upwork and Fiverr.</li>
+              <li>Built custom CMS solutions and headless e-commerce stores.</li>
+            </ul>
+            <div class="exp-tags"><span>HTML/CSS/JS</span><span>WordPress</span><span>Shopify</span><span>Figma</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- ===== END EXPERIENCE ===== -->
+
+    <!-- ===== PROJECTS SECTION ===== -->
+    <section id="projects">
+      <h2 class="section-heading"><span class="fira section-num">03.</span> Projects <span class="section-line"></span></h2>
+
+      <!-- Featured Projects -->
+      <div class="featured-projects">
+
+        <!-- Project 1 -->
+        <article class="featured-project">
+          <div class="fp-image-wrap">
+            <a href="#" target="_blank">
+              <img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=700&h=420&fit=crop" alt="PromptForge" />
+              <div class="fp-img-overlay"></div>
+            </a>
+          </div>
+          <div class="fp-content right">
+            <p class="fp-label fira">Featured Project</p>
+            <h3 class="fp-title"><a href="#" target="_blank">PromptForge</a></h3>
+            <div class="fp-desc">
+              <p>An AI prompt engineering workbench that lets developers craft, test, and version prompts for LLMs. Features real-time token counting, diff viewer, and team collaboration with live cursors.</p>
+            </div>
+            <div class="fp-links">
+              <a href="#" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
+              <a href="#" target="_blank" aria-label="External"><i class="fas fa-external-link-alt"></i></a>
+            </div>
+            <ul class="fp-tech"><li>React</li><li>OpenAI API</li><li>WebSockets</li><li>Tailwind</li></ul>
+          </div>
+        </article>
+
+        <!-- Project 2 -->
+        <article class="featured-project reverse">
+          <div class="fp-image-wrap">
+            <a href="#" target="_blank">
+              <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?w=700&h=420&fit=crop" alt="EthioBot" />
+              <div class="fp-img-overlay"></div>
+            </a>
+          </div>
+          <div class="fp-content left">
+            <p class="fp-label fira">Featured Project</p>
+            <h3 class="fp-title"><a href="#" target="_blank">EthioBot Interface</a></h3>
+            <div class="fp-desc">
+              <p>A hardware prototype control dashboard for a locally-built robotics platform. Real-time sensor data visualization, motor control UI, and Amharic voice commands via WebSocket bridge.</p>
+            </div>
+            <div class="fp-links">
+              <a href="#" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
+              <a href="#" target="_blank" aria-label="External"><i class="fas fa-external-link-alt"></i></a>
+            </div>
+            <ul class="fp-tech"><li>Vue.js</li><li>WebSockets</li><li>Python</li><li>Raspberry Pi</li></ul>
+          </div>
+        </article>
+
+        <!-- Project 3 -->
+        <article class="featured-project">
+          <div class="fp-image-wrap">
+            <a href="#" target="_blank">
+              <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=700&h=420&fit=crop" alt="DemoKit" />
+              <div class="fp-img-overlay"></div>
+            </a>
+          </div>
+          <div class="fp-content right">
+            <p class="fp-label fira">Featured Project</p>
+            <h3 class="fp-title"><a href="#" target="_blank">DemoKit Platform</a></h3>
+            <div class="fp-desc">
+              <p>A SaaS video demo platform for startups. Record, host, and share interactive product walkthroughs with clickable hotspots, analytics dashboard, and Cloudflare Stream integration.</p>
+            </div>
+            <div class="fp-links">
+              <a href="#" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
+              <a href="#" target="_blank" aria-label="External"><i class="fas fa-external-link-alt"></i></a>
+            </div>
+            <ul class="fp-tech"><li>Next.js</li><li>Cloudflare Stream</li><li>PostgreSQL</li><li>Stripe</li></ul>
+          </div>
+        </article>
+
+      </div>
+
+      <!-- Other Projects Grid -->
+      <h3 class="other-projects-title fira">// Other Noteworthy Projects</h3>
+      <div class="other-projects-grid" id="other-grid">
+        <div class="op-card"><div class="op-top"><i class="fas fa-folder-open"></i><div class="op-links"><a href="#"><i class="fab fa-github"></i></a><a href="#"><i class="fas fa-external-link-alt"></i></a></div></div><h4>ShopEthio</h4><p>E-commerce platform for Ethiopian artisans with Telebirr payment integration.</p><ul><li>React</li><li>Node.js</li><li>MongoDB</li></ul></div>
+        <div class="op-card"><div class="op-top"><i class="fas fa-folder-open"></i><div class="op-links"><a href="#"><i class="fab fa-github"></i></a><a href="#"><i class="fas fa-external-link-alt"></i></a></div></div><h4>LinguaAI</h4><p>Amharic-English translation app powered by custom fine-tuned NLP model.</p><ul><li>Python</li><li>FastAPI</li><li>React</li></ul></div>
+        <div class="op-card"><div class="op-top"><i class="fas fa-folder-open"></i><div class="op-links"><a href="#"><i class="fab fa-github"></i></a><a href="#"><i class="fas fa-external-link-alt"></i></a></div></div><h4>HealthTrack</h4><p>Patient management system for Ethiopian clinics with offline-first architecture.</p><ul><li>Vue.js</li><li>IndexedDB</li><li>Express</li></ul></div>
+        <div class="op-card"><div class="op-top"><i class="fas fa-folder-open"></i><div class="op-links"><a href="#"><i class="fab fa-github"></i></a><a href="#"><i class="fas fa-external-link-alt"></i></a></div></div><h4>UIKit-AM</h4><p>Open-source Amharic-ready UI component library with RTL support and Figma tokens.</p><ul><li>TypeScript</li><li>Storybook</li><li>CSS</li></ul></div>
+        <div class="op-card"><div class="op-top"><i class="fas fa-folder-open"></i><div class="op-links"><a href="#"><i class="fab fa-github"></i></a><a href="#"><i class="fas fa-external-link-alt"></i></a></div></div><h4>AgriConnect</h4><p>Marketplace connecting Ethiopian farmers with buyers and logistics providers.</p><ul><li>Next.js</li><li>Mapbox</li><li>PostgreSQL</li></ul></div>
+        <div class="op-card"><div class="op-top"><i class="fas fa-folder-open"></i><div class="op-links"><a href="#"><i class="fab fa-github"></i></a><a href="#"><i class="fas fa-external-link-alt"></i></a></div></div><h4>DevPulse</h4><p>Developer analytics dashboard tracking GitHub activity, streaks, and team velocity.</p><ul><li>React</li><li>D3.js</li><li>GitHub API</li></ul></div>
+      </div>
+      <div class="show-more-wrap"><button id="show-more-btn" onclick="toggleMoreProjects()"><i class="fas fa-grip-horizontal"></i> Show More <span class="btn-icon"><i class="fas fa-chevron-down"></i></span></button></div>
+    </section>
+    <!-- ===== END PROJECTS ===== -->
+
+    <!-- ===== CASE STUDIES ===== -->
+    <section id="casestudies">
+      <h2 class="section-heading"><span class="fira section-num">04.</span> Case Studies <span class="section-line"></span></h2>
+      <p class="section-sub">Deep-dives into real problems I've solved — in Amharic &amp; English.</p>
+      <div class="cs-tabs">
+        <div class="cs-tab-btns">
+          <button class="cs-tab-btn active" data-cs="0">ShopEthio Redesign</button>
+          <button class="cs-tab-btn" data-cs="1">HealthTrack Offline</button>
+          <button class="cs-tab-btn" data-cs="2">LinguaAI NLP</button>
+        </div>
+        <div class="cs-panels">
+          <div class="cs-panel active">
+            <div class="cs-block problem"><span class="cs-pill fira">ችግሩ / The Problem</span><p>Ethiopian artisans lacked a trustworthy online presence. Existing platforms charged high fees, didn't support Amharic, and had no local payment option — leaving 80% of handcraft sellers offline.</p></div>
+            <div class="cs-block solution"><span class="cs-pill fira">መፍትሔው / The Solution</span><p>Built a mobile-first e-commerce platform in both Amharic and English, integrated Telebirr and CBE payment gateways, and created an intuitive seller dashboard operable with low digital literacy.</p></div>
+            <div class="cs-block tech"><span class="cs-pill fira">ቴክኖሎጂው / The Tech</span><p>React, Node.js, MongoDB Atlas, Cloudinary CDN, Telebirr API, i18n localization, and a custom offline-capable PWA shell for low-connectivity areas.</p></div>
+            <div class="cs-actions"><a href="#" class="btn-outline">Read Full Case Study</a><a href="#" class="btn-outline"><i class="fas fa-play-circle"></i> Demo Video</a></div>
+          </div>
+          <div class="cs-panel">
+            <div class="cs-block problem"><span class="cs-pill fira">ችግሩ / The Problem</span><p>Rural Ethiopian clinics operated with paper-based records. Internet outages disrupted patient care, records were lost, and staff needed a system requiring zero technical training.</p></div>
+            <div class="cs-block solution"><span class="cs-pill fira">መፍትሔው / The Solution</span><p>Designed an offline-first patient management system using IndexedDB and Service Workers. Data syncs automatically when connectivity is restored, with a touch-friendly interface in Amharic.</p></div>
+            <div class="cs-block tech"><span class="cs-pill fira">ቴክኖሎጂው / The Tech</span><p>Vue.js, Workbox PWA, IndexedDB, Express.js, PostgreSQL, and CouchDB sync protocol with conflict resolution.</p></div>
+            <div class="cs-actions"><a href="#" class="btn-outline">Read Full Case Study</a><a href="#" class="btn-outline"><i class="fas fa-play-circle"></i> Demo Video</a></div>
+          </div>
+          <div class="cs-panel">
+            <div class="cs-block problem"><span class="cs-pill fira">ችግሩ / The Problem</span><p>Existing translation tools poorly handled Amharic morphology, resulting in inaccurate translations for official documents. Government and NGO staff wasted hours manually correcting outputs.</p></div>
+            <div class="cs-block solution"><span class="cs-pill fira">መፍትሔው / The Solution</span><p>Fine-tuned a multilingual transformer model on a curated Amharic-English corpus. Built a clean web interface with document upload, translation memory, and glossary management.</p></div>
+            <div class="cs-block tech"><span class="cs-pill fira">ቴክኖሎጂው / The Tech</span><p>Python, HuggingFace Transformers, FastAPI, React, Docker, and a custom Amharic tokenizer based on Ge'ez script segmentation rules.</p></div>
+            <div class="cs-actions"><a href="#" class="btn-outline">Read Full Case Study</a><a href="#" class="btn-outline"><i class="fas fa-play-circle"></i> Demo Video</a></div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- ===== END CASE STUDIES ===== -->
+
+    <!-- ===== AWARDS ===== -->
+    <section id="awards">
+      <h2 class="section-heading"><span class="fira section-num">05.</span> Awards &amp; Recognition <span class="section-line"></span></h2>
+      <div class="awards-grid">
+        <div class="award-card"><div class="award-icon" style="background:linear-gradient(135deg,#f59e0b,#ef4444)"><i class="fas fa-trophy"></i></div><div class="award-info"><h4>iCog Labs Hackathon — 1st Place</h4><p class="fira">2023 · AI for Social Good</p><p>Won first place for HealthTrack offline-first patient system serving rural clinics.</p></div></div>
+        <div class="award-card"><div class="award-icon" style="background:linear-gradient(135deg,#6366f1,#8b5cf6)"><i class="fas fa-star"></i></div><div class="award-info"><h4>Top Rated Plus — Upwork</h4><p class="fira">2022 · Freelance Excellence</p><p>Achieved Top Rated Plus status with 100% Job Success Score over 3 consecutive years.</p></div></div>
+        <div class="award-card"><div class="award-icon" style="background:linear-gradient(135deg,#10b981,#059669)"><i class="fas fa-code"></i></div><div class="award-info"><h4>Open Source Contributor Award</h4><p class="fira">2022 · GitHub Africa</p><p>Recognized for UIKit-AM — the first Amharic-ready open-source component library.</p></div></div>
+        <div class="award-card"><div class="award-icon" style="background:linear-gradient(135deg,#0ea5e9,#6366f1)"><i class="fas fa-graduation-cap"></i></div><div class="award-info"><h4>Best Design — AAiT Demo Day</h4><p class="fira">2021 · Addis Ababa University</p><p>Awarded best UI/UX design in the annual tech demo day for AgriConnect marketplace.</p></div></div>
+      </div>
+    </section>
+
+    <!-- ===== TESTIMONIALS ===== -->
+    <section id="testimonials">
+      <h2 class="section-heading"><span class="fira section-num">06.</span> Testimonials <span class="section-line"></span></h2>
+      <div class="testimonials-carousel">
+        <div class="testimonial-track" id="tTrack">
+          <div class="testimonial-card"><p>"Girma is one of the most talented developers I've worked with. He delivered a pixel-perfect UI ahead of schedule and the code quality was exceptional. Our user retention jumped 35% after launch."</p><div class="testimonial-author"><img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=60&h=60&fit=crop&crop=face" alt="Daniel K." /><div><strong>Daniel Kebede</strong><span class="fira">CTO, Habesha Tech</span></div></div></div>
+          <div class="testimonial-card"><p>"Working with Girma was a game-changer for our startup. He understood our vision immediately, asked the right questions, and delivered a product that exceeded every expectation. Highly recommended."</p><div class="testimonial-author"><img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=60&h=60&fit=crop&crop=face" alt="Sara T." /><div><strong>Sara Tesfaye</strong><span class="fira">Founder, DemoKit</span></div></div></div>
+          <div class="testimonial-card"><p>"Girma redesigned our entire design system in Figma and then implemented it in code flawlessly. His attention to accessibility and performance put him in a league of his own among the contractors we've hired."</p><div class="testimonial-author"><img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=60&h=60&fit=crop&crop=face" alt="Mike V." /><div><strong>Mike Van der Berg</strong><span class="fira">Product Lead, AfriCode Labs</span></div></div></div>
+        </div>
+        <div class="testimonial-controls">
+          <button onclick="prevTestimonial()" aria-label="Previous"><i class="fas fa-chevron-left"></i></button>
+          <div class="t-dots" id="tDots"></div>
+          <button onclick="nextTestimonial()" aria-label="Next"><i class="fas fa-chevron-right"></i></button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== CONTACT ===== -->
+    <section id="contact">
+      <p class="contact-overline fira">07. What's Next?</p>
+      <h2 class="contact-heading">Get In Touch</h2>
+      <p class="contact-body">
+        I'm currently open to new opportunities — whether it's a full-time role, a freelance project,
+        or just a chat about ideas. My inbox is always open. I'll do my best to get back to you!
+      </p>
+      <div class="contact-buttons">
+        <a href="mailto:girma.mengistu@example.com" class="btn-hire large"><i class="fas fa-paper-plane"></i> Say Hello</a>
+        <a href="#" class="btn-outline large" download><i class="fas fa-download"></i> Download CV</a>
+      </div>
+      <div class="contact-social">
+        <a href="https://github.com" target="_blank"><i class="fab fa-github"></i></a>
+        <a href="https://linkedin.com" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+        <a href="https://twitter.com" target="_blank"><i class="fab fa-x-twitter"></i></a>
+        <a href="https://dribbble.com" target="_blank"><i class="fab fa-dribbble"></i></a>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+      <p class="fira">Designed &amp; Built by <span>Girma Mengistu</span></p>
+      <p class="fira footer-sub">Inspired by Brittany Chiang's design philosophy</p>
+    </footer>
+
+  </main>
+  <!-- ===== END RIGHT PANEL ===== -->
+
+</div><!-- #app -->
+
+<style>
+/* ===========================
+   CSS CUSTOM PROPERTIES
+=========================== */
+:root {
+  --navy:       #0f172a;
+  --navy-light: #1e293b;
+  --navy-card:  #162032;
+  --teal:       #5eead4;
+  --teal-dim:   rgba(94,234,212,0.12);
+  --teal-glow:  rgba(94,234,212,0.25);
+  --white:      #e2e8f0;
+  --slate:      #94a3b8;
+  --slate-dim:  #64748b;
+  --font-sans:  'Inter', sans-serif;
+  --font-mono:  'Fira Code', monospace;
+  --transition: 0.25s cubic-bezier(0.4,0,0.2,1);
+  --radius:     8px;
+  --panel-w:    340px;
+}
+
+/* ===========================
+   RESET & BASE
+=========================== */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body {
+  background: var(--navy);
+  color: var(--white);
+  font-family: var(--font-sans);
+  font-size: 16px;
+  line-height: 1.7;
+  overflow-x: hidden;
+}
+a { color: inherit; text-decoration: none; }
+ul { list-style: none; }
+img { display: block; max-width: 100%; }
+button { cursor: pointer; border: none; background: none; font-family: inherit; }
+
+.fira { font-family: var(--font-mono); }
+
+/* ===========================
+   SCROLL PROGRESS
+=========================== */
+#scroll-progress {
+  position: fixed;
+  top: 0; left: 0;
+  height: 3px;
+  width: 0%;
+  background: linear-gradient(90deg, var(--teal), #818cf8);
+  z-index: 9999;
+  transition: width 0.1s linear;
+}
+
+/* ===========================
+   CURSOR GLOW
+=========================== */
+#cursor-glow {
+  position: fixed;
+  pointer-events: none;
+  z-index: 0;
+  width: 600px; height: 600px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(99,102,241,0.12) 0%, transparent 70%);
+  transform: translate(-50%, -50%);
+  transition: top 0.08s ease, left 0.08s ease;
+  top: -300px; left: -300px;
+}
+
+/* ===========================
+   APP LAYOUT
+=========================== */
+#app {
+  display: flex;
+  min-height: 100vh;
+  max-width: 1400px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 1;
+}
+
+/* ===========================
+   LEFT PANEL
+=========================== */
+#left-panel {
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  width: var(--panel-w);
+  min-width: var(--panel-w);
+  padding: 80px 48px 48px;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  overflow: hidden;
+}
+
+.availability-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(16,185,129,0.1);
+  border: 1px solid rgba(16,185,129,0.3);
+  color: #34d399;
+  font-family: var(--font-mono);
+  font-size: 11px;
+  padding: 6px 14px;
+  border-radius: 20px;
+  width: fit-content;
+}
+.pulse-dot {
+  width: 8px; height: 8px;
+  border-radius: 50%;
+  background: #34d399;
+  animation: pulse 1.8s ease-in-out infinite;
+}
+@keyframes pulse {
+  0%,100% { opacity: 1; transform: scale(1); }
+  50%      { opacity: 0.4; transform: scale(0.8); }
+}
+
+.site-name {
+  font-size: clamp(32px, 3vw, 46px);
+  font-weight: 900;
+  line-height: 1.05;
+  background: linear-gradient(135deg, #e2e8f0 0%, var(--teal) 50%, #818cf8 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  letter-spacing: -1px;
+}
+.site-role {
+  font-size: clamp(14px, 1.5vw, 17px);
+  font-weight: 500;
+  color: var(--teal);
+  line-height: 1.4;
+  margin-top: 8px;
+}
+.site-tagline {
+  font-size: 13px;
+  color: var(--slate);
+  max-width: 240px;
+  margin-top: 10px;
+}
+
+/* Desktop Nav */
+#desktop-nav ul { display: flex; flex-direction: column; gap: 4px; }
+.nav-link {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 6px 0;
+  color: var(--slate-dim);
+  font-family: var(--font-mono);
+  font-size: 13px;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  transition: color var(--transition);
+}
+.nav-line {
+  display: inline-block;
+  height: 1px;
+  width: 32px;
+  background: currentColor;
+  transition: width var(--transition);
+  flex-shrink: 0;
+}
+.nav-link:hover, .nav-link.active {
+  color: var(--white);
+}
+.nav-link:hover .nav-line,
+.nav-link.active .nav-line {
+  width: 64px;
+  background: var(--teal);
+  box-shadow: 0 0 10px var(--teal-glow);
+}
+.nav-link.active { color: var(--teal); }
+
+/* Social Links */
+.social-links {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+}
+.social-links a {
+  color: var(--slate-dim);
+  font-size: 18px;
+  transition: color var(--transition), transform var(--transition);
+}
+.social-links a:hover {
+  color: var(--teal);
+  transform: translateY(-3px);
+}
+
+/* CTA Buttons */
+.left-cta { display: flex; flex-direction: column; gap: 12px; }
+.btn-primary, .btn-hire, .btn-outline {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 12px 22px;
+  border-radius: var(--radius);
+  font-family: var(--font-mono);
+  font-size: 13px;
+  font-weight: 500;
+  letter-spacing: 0.05em;
+  transition: all var(--transition);
+}
+.btn-primary {
+  background: var(--teal-dim);
+  color: var(--teal);
+  border: 1px solid var(--teal-glow);
+}
+.btn-primary:hover {
+  background: var(--teal-glow);
+  box-shadow: 0 0 20px var(--teal-glow);
+  transform: translateY(-2px);
+}
+.btn-hire {
+  background: linear-gradient(135deg, var(--teal), #818cf8);
+  color: var(--navy);
+  font-weight: 700;
+}
+.btn-hire:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(94,234,212,0.3);
+}
+.btn-outline {
+  color: var(--teal);
+  border: 1px solid var(--teal);
+}
+.btn-outline:hover {
+  background: var(--teal-dim);
+  transform: translateY(-2px);
+}
+.btn-hire.large, .btn-outline.large {
+  padding: 16px 32px;
+  font-size: 15px;
+}
+</style>
+
+<style>
+/* ===========================
+   RIGHT PANEL & SECTIONS
+=========================== */
+#right-panel {
+  flex: 1;
+  padding: 0 80px 0 80px;
+  overflow: visible;
+}
+
+section {
+  min-height: 100vh;
+  padding: 100px 0 80px;
+}
+section:first-child { padding-top: 0; }
+
+.section-heading {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  font-size: clamp(20px, 2.5vw, 26px);
+  font-weight: 700;
+  color: var(--white);
+  margin-bottom: 48px;
+  white-space: nowrap;
+}
+.section-num {
+  color: var(--teal);
+  font-size: clamp(14px, 1.5vw, 16px);
+}
+.section-line {
+  display: block;
+  height: 1px;
+  width: 200px;
+  background: var(--navy-light);
+  flex-shrink: 1;
+}
+
+/* ===========================
+   HERO
+=========================== */
+#hero {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-top: 80px;
+  padding-bottom: 60px;
+  position: relative;
+}
+.hero-greeting {
+  color: var(--teal);
+  font-size: clamp(14px, 1.5vw, 16px);
+  margin-bottom: 16px;
+}
+.hero-name {
+  font-size: clamp(52px, 7vw, 88px);
+  font-weight: 900;
+  line-height: 1;
+  letter-spacing: -3px;
+  background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 40%, var(--teal) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin-bottom: 16px;
+}
+.hero-sub {
+  font-size: clamp(32px, 5vw, 58px);
+  font-weight: 800;
+  color: var(--slate);
+  line-height: 1.1;
+  letter-spacing: -2px;
+  margin-bottom: 28px;
+}
+.hero-desc {
+  max-width: 560px;
+  color: var(--slate);
+  font-size: clamp(15px, 1.5vw, 17px);
+  line-height: 1.8;
+  margin-bottom: 36px;
+}
+.hero-desc strong { color: var(--teal); font-weight: 600; }
+.hero-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+  margin-bottom: 56px;
+}
+
+/* Hero Stats */
+.hero-stats {
+  display: flex;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+.stat-item {
+  text-align: center;
+  position: relative;
+}
+.stat-item::after {
+  content: '';
+  position: absolute;
+  right: -20px;
+  top: 50%;
+  transform: translateY(-50%);
+  height: 40px;
+  width: 1px;
+  background: var(--navy-light);
+}
+.stat-item:last-child::after { display: none; }
+.stat-num {
+  font-size: clamp(28px, 3vw, 42px);
+  font-weight: 900;
+  color: var(--teal);
+  font-family: var(--font-mono);
+  line-height: 1;
+}
+.stat-plus {
+  font-size: clamp(18px, 2vw, 24px);
+  color: var(--teal);
+  font-weight: 700;
+}
+.stat-label {
+  display: block;
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--slate-dim);
+  margin-top: 4px;
+  font-family: var(--font-mono);
+}
+
+.hero-scroll-hint {
+  position: absolute;
+  bottom: 40px;
+  left: 0;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: var(--slate-dim);
+  font-size: 11px;
+  letter-spacing: 0.1em;
+}
+.bounce { animation: bounce 2s infinite; display: inline-block; }
+@keyframes bounce {
+  0%,100% { transform: translateY(0); }
+  50%     { transform: translateY(6px); }
+}
+
+/* ===========================
+   ABOUT
+=========================== */
+.about-grid {
+  display: grid;
+  grid-template-columns: 1fr 280px;
+  gap: 60px;
+  align-items: start;
+  margin-bottom: 60px;
+}
+.about-text { color: var(--slate); }
+.about-text p { margin-bottom: 16px; font-size: 15px; }
+.about-text strong { color: var(--white); }
+.about-text em { color: var(--teal); font-style: normal; }
+
+.skills-list {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 6px;
+  margin-top: 8px;
+}
+.skills-list li {
+  font-family: var(--font-mono);
+  font-size: 13px;
+  color: var(--slate);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.skills-list li i { color: var(--teal); font-size: 10px; }
+
+/* About Image */
+.about-image-wrapper {
+  position: relative;
+  margin-top: 8px;
+}
+.about-img-frame {
+  position: relative;
+  border-radius: 10px;
+  overflow: hidden;
+  z-index: 1;
+}
+.about-photo {
+  width: 100%;
+  filter: grayscale(30%) contrast(1.05);
+  transition: filter 0.4s ease;
+  border-radius: 10px;
+}
+.about-photo:hover { filter: none; }
+.img-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, transparent 50%, rgba(94,234,212,0.1));
+  pointer-events: none;
+}
+.about-img-border {
+  position: absolute;
+  top: 14px; left: 14px;
+  right: -14px; bottom: -14px;
+  border: 2px solid var(--teal);
+  border-radius: 10px;
+  z-index: 0;
+  transition: all 0.3s ease;
+}
+.about-image-wrapper:hover .about-img-border {
+  top: 10px; left: 10px;
+  right: -10px; bottom: -10px;
+}
+
+/* Skills Bars */
+.skills-section { margin-top: 20px; }
+.skills-title {
+  font-size: 13px;
+  color: var(--teal);
+  margin-bottom: 24px;
+  letter-spacing: 0.05em;
+}
+.skill-bars { display: flex; flex-direction: column; gap: 16px; margin-bottom: 32px; }
+.skill-bar-item {}
+.skill-bar-label {
+  display: flex;
+  justify-content: space-between;
+  font-size: 13px;
+  color: var(--slate);
+  margin-bottom: 6px;
+}
+.skill-pct { color: var(--teal); font-family: var(--font-mono); }
+.skill-bar-track {
+  height: 5px;
+  background: var(--navy-light);
+  border-radius: 3px;
+  overflow: hidden;
+}
+.skill-bar-fill {
+  height: 100%;
+  width: 0;
+  background: linear-gradient(90deg, var(--teal), #818cf8);
+  border-radius: 3px;
+  transition: width 1.2s cubic-bezier(0.4,0,0.2,1);
+}
+
+.skill-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 8px;
+}
+.skill-chips span {
+  background: var(--navy-light);
+  color: var(--teal);
+  font-family: var(--font-mono);
+  font-size: 12px;
+  padding: 5px 14px;
+  border-radius: 20px;
+  border: 1px solid rgba(94,234,212,0.2);
+  transition: all var(--transition);
+}
+.skill-chips span:hover {
+  background: var(--teal-dim);
+  border-color: var(--teal);
+  box-shadow: 0 0 12px var(--teal-glow);
+  transform: translateY(-2px);
+}
+</style>
+
+<style>
+/* ===========================
+   EXPERIENCE TABS
+=========================== */
+.exp-tabs { display: flex; gap: 0; }
+.exp-tab-btns {
+  display: flex;
+  flex-direction: column;
+  border-left: 2px solid var(--navy-light);
+  min-width: 160px;
+}
+.exp-tab-btn {
+  text-align: left;
+  padding: 14px 20px;
+  font-family: var(--font-mono);
+  font-size: 13px;
+  color: var(--slate-dim);
+  border-left: 2px solid transparent;
+  margin-left: -2px;
+  transition: all var(--transition);
+  background: none;
+}
+.exp-tab-btn:hover { color: var(--teal); background: var(--teal-dim); }
+.exp-tab-btn.active {
+  color: var(--teal);
+  border-left-color: var(--teal);
+  background: var(--teal-dim);
+}
+
+.exp-tab-panels { flex: 1; padding-left: 32px; }
+.exp-panel { display: none; }
+.exp-panel.active { display: block; }
+.exp-panel h3 {
+  font-size: clamp(16px, 1.8vw, 19px);
+  font-weight: 600;
+  color: var(--white);
+  margin-bottom: 4px;
+}
+.exp-company { color: var(--teal); }
+.exp-range {
+  font-size: 13px;
+  color: var(--slate-dim);
+  margin-bottom: 20px;
+}
+.exp-panel ul { display: flex; flex-direction: column; gap: 10px; }
+.exp-panel li {
+  color: var(--slate);
+  font-size: 14px;
+  padding-left: 20px;
+  position: relative;
+}
+.exp-panel li::before {
+  content: '▸';
+  position: absolute;
+  left: 0;
+  color: var(--teal);
+}
+.exp-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 20px;
+}
+.exp-tags span {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  color: var(--teal);
+  background: var(--teal-dim);
+  border: 1px solid rgba(94,234,212,0.2);
+  padding: 4px 12px;
+  border-radius: 4px;
+}
+
+/* ===========================
+   FEATURED PROJECTS
+=========================== */
+.featured-projects { display: flex; flex-direction: column; gap: 80px; margin-bottom: 80px; }
+
+.featured-project {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0;
+  align-items: center;
+  position: relative;
+}
+.fp-image-wrap {
+  position: relative;
+  border-radius: var(--radius);
+  overflow: hidden;
+  grid-column: 1;
+  grid-row: 1;
+}
+/* Reverse: image on right, text on left */
+.featured-project.reverse .fp-image-wrap {
+  grid-column: 2;
+  grid-row: 1;
+}
+.featured-project.reverse .fp-content {
+  grid-column: 1;
+  grid-row: 1;
+}
+
+.fp-image-wrap img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  filter: grayscale(20%);
+  transition: filter 0.4s ease, transform 0.4s ease;
+}
+.fp-image-wrap:hover img { filter: none; transform: scale(1.03); }
+.fp-img-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, rgba(94,234,212,0.15), rgba(15,23,42,0.4));
+  transition: opacity 0.4s;
+}
+.fp-image-wrap:hover .fp-img-overlay { opacity: 0; }
+
+.fp-content {
+  position: relative;
+  z-index: 1;
+  padding: 24px;
+}
+.fp-content.right { text-align: right; }
+.fp-content.left  { text-align: left; }
+.fp-content.right .fp-links { justify-content: flex-end; }
+.fp-content.right .fp-tech  { justify-content: flex-end; }
+
+.fp-label {
+  color: var(--teal);
+  font-size: 12px;
+  letter-spacing: 0.1em;
+  margin-bottom: 8px;
+}
+.fp-title {
+  font-size: clamp(18px, 2vw, 22px);
+  font-weight: 700;
+  color: var(--white);
+  margin-bottom: 20px;
+}
+.fp-title a:hover { color: var(--teal); }
+.fp-desc {
+  background: var(--navy-light);
+  border-radius: var(--radius);
+  padding: 20px 24px;
+  margin-bottom: 16px;
+  color: var(--slate);
+  font-size: 14px;
+  line-height: 1.7;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+}
+.fp-links {
+  display: flex;
+  gap: 16px;
+  margin-bottom: 14px;
+}
+.fp-links a {
+  color: var(--slate);
+  font-size: 18px;
+  transition: color var(--transition), transform var(--transition);
+}
+.fp-links a:hover { color: var(--teal); transform: translateY(-3px); }
+.fp-tech {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  list-style: none;
+}
+.fp-tech li {
+  font-family: var(--font-mono);
+  font-size: 12px;
+  color: var(--slate);
+}
+
+/* Other Projects */
+.other-projects-title {
+  font-size: 14px;
+  color: var(--teal);
+  text-align: center;
+  margin-bottom: 32px;
+}
+.other-projects-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+}
+.op-card {
+  background: var(--navy-card);
+  border: 1px solid var(--navy-light);
+  border-radius: var(--radius);
+  padding: 28px 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  transition: all var(--transition);
+}
+.op-card:hover {
+  transform: translateY(-6px);
+  border-color: var(--teal);
+  box-shadow: 0 12px 32px rgba(0,0,0,0.3);
+}
+.op-top { display: flex; justify-content: space-between; align-items: flex-start; }
+.op-top > i { font-size: 32px; color: var(--teal); }
+.op-links { display: flex; gap: 14px; }
+.op-links a { color: var(--slate-dim); font-size: 16px; transition: color var(--transition); }
+.op-links a:hover { color: var(--teal); }
+.op-card h4 { font-size: 16px; font-weight: 600; color: var(--white); }
+.op-card p { font-size: 13px; color: var(--slate); line-height: 1.6; flex: 1; }
+.op-card ul { display: flex; gap: 8px; flex-wrap: wrap; }
+.op-card li {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  color: var(--slate-dim);
+}
+
+.show-more-wrap {
+  text-align: center;
+  margin-top: 52px;
+  position: relative;
+}
+
+/* subtle divider line behind button */
+.show-more-wrap::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 0; right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--navy-light), transparent);
+  transform: translateY(-50%);
+}
+
+#show-more-btn {
+  position: relative;
+  font-family: var(--font-mono);
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  color: var(--navy);
+  padding: 14px 40px;
+  border-radius: 40px;
+  border: none;
+  background: linear-gradient(135deg, var(--teal) 0%, #818cf8 100%);
+  box-shadow: 0 0 24px rgba(94,234,212,0.35), 0 4px 16px rgba(0,0,0,0.3);
+  overflow: hidden;
+  transition: all 0.3s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  z-index: 1;
+}
+
+/* animated shine sweep */
+#show-more-btn::before {
+  content: '';
+  position: absolute;
+  top: 0; left: -75%;
+  width: 50%;
+  height: 100%;
+  background: linear-gradient(120deg, transparent, rgba(255,255,255,0.3), transparent);
+  transform: skewX(-20deg);
+  transition: left 0.6s ease;
+}
+#show-more-btn:hover::before { left: 130%; }
+
+#show-more-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 0 40px rgba(94,234,212,0.5), 0 8px 32px rgba(0,0,0,0.4);
+}
+#show-more-btn:active { transform: translateY(-1px); }
+
+#show-more-btn .btn-icon {
+  display: inline-flex;
+  transition: transform 0.3s ease;
+}
+#show-more-btn.expanded .btn-icon { transform: rotate(180deg); }
+
+/* Initially hide last 3 cards */
+.other-projects-grid .op-card:nth-child(n+4) { display: none; }
+.other-projects-grid.expanded .op-card { display: flex !important; }
+</style>
+
+<style>
+/* ===========================
+   CASE STUDIES
+=========================== */
+.section-sub {
+  color: var(--slate);
+  font-size: 14px;
+  margin-top: -36px;
+  margin-bottom: 40px;
+}
+.cs-tabs { display: flex; flex-direction: column; gap: 24px; }
+.cs-tab-btns { display: flex; flex-wrap: wrap; gap: 10px; }
+.cs-tab-btn {
+  font-family: var(--font-mono);
+  font-size: 13px;
+  color: var(--slate-dim);
+  padding: 10px 20px;
+  border: 1px solid var(--navy-light);
+  border-radius: var(--radius);
+  transition: all var(--transition);
+}
+.cs-tab-btn:hover { color: var(--teal); border-color: var(--teal); }
+.cs-tab-btn.active {
+  color: var(--teal);
+  border-color: var(--teal);
+  background: var(--teal-dim);
+}
+.cs-panels {}
+.cs-panel { display: none; flex-direction: column; gap: 20px; }
+.cs-panel.active { display: flex; }
+.cs-block {
+  padding: 24px 28px;
+  border-radius: var(--radius);
+  border-left: 3px solid;
+}
+.cs-block.problem  { background: rgba(239,68,68,0.06); border-color: #ef4444; }
+.cs-block.solution { background: rgba(94,234,212,0.06); border-color: var(--teal); }
+.cs-block.tech     { background: rgba(129,140,248,0.06); border-color: #818cf8; }
+.cs-pill {
+  display: inline-block;
+  font-size: 11px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+.cs-block.problem  .cs-pill { color: #ef4444; }
+.cs-block.solution .cs-pill { color: var(--teal); }
+.cs-block.tech     .cs-pill { color: #818cf8; }
+.cs-block p { color: var(--slate); font-size: 14px; line-height: 1.7; }
+.cs-actions { display: flex; gap: 14px; flex-wrap: wrap; }
+
+/* ===========================
+   AWARDS
+=========================== */
+.awards-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+.award-card {
+  display: flex;
+  gap: 20px;
+  align-items: flex-start;
+  background: var(--navy-card);
+  border: 1px solid var(--navy-light);
+  border-radius: var(--radius);
+  padding: 24px;
+  transition: all var(--transition);
+}
+.award-card:hover {
+  transform: translateY(-4px);
+  border-color: var(--teal);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+}
+.award-icon {
+  width: 48px;
+  height: 48px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  font-size: 20px;
+  color: white;
+}
+.award-info h4 {
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--white);
+  margin-bottom: 4px;
+}
+.award-info .fira {
+  font-size: 11px;
+  color: var(--teal);
+  display: block;
+  margin-bottom: 8px;
+}
+.award-info p { font-size: 13px; color: var(--slate); }
+
+/* ===========================
+   TESTIMONIALS
+=========================== */
+.testimonials-carousel { position: relative; overflow: hidden; }
+.testimonial-track {
+  display: flex;
+  transition: transform 0.5s cubic-bezier(0.4,0,0.2,1);
+}
+.testimonial-card {
+  min-width: 100%;
+  background: var(--navy-card);
+  border: 1px solid var(--navy-light);
+  border-radius: 12px;
+  padding: 40px 48px;
+}
+.testimonial-card p {
+  font-size: clamp(15px, 1.6vw, 18px);
+  color: var(--white);
+  line-height: 1.8;
+  font-style: italic;
+  position: relative;
+  padding-left: 24px;
+  margin-bottom: 28px;
+}
+.testimonial-card p::before {
+  content: '"';
+  position: absolute;
+  left: 0;
+  top: -8px;
+  font-size: 48px;
+  color: var(--teal);
+  font-style: normal;
+  line-height: 1;
+}
+.testimonial-author {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+.testimonial-author img {
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  border: 2px solid var(--teal);
+  object-fit: cover;
+}
+.testimonial-author strong { display: block; color: var(--white); font-size: 15px; }
+.testimonial-author .fira { font-size: 12px; color: var(--teal); }
+
+.testimonial-controls {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  margin-top: 24px;
+}
+.testimonial-controls button {
+  width: 36px; height: 36px;
+  border-radius: 50%;
+  border: 1px solid var(--navy-light);
+  color: var(--slate);
+  font-size: 13px;
+  transition: all var(--transition);
+  display: flex; align-items: center; justify-content: center;
+}
+.testimonial-controls button:hover {
+  border-color: var(--teal);
+  color: var(--teal);
+}
+.t-dots { display: flex; gap: 8px; }
+.t-dot {
+  width: 6px; height: 6px;
+  border-radius: 50%;
+  background: var(--navy-light);
+  cursor: pointer;
+  transition: all var(--transition);
+}
+.t-dot.active { background: var(--teal); width: 20px; border-radius: 3px; }
+
+/* ===========================
+   CONTACT
+=========================== */
+#contact {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  min-height: 80vh;
+}
+.contact-overline {
+  color: var(--teal);
+  font-size: 13px;
+  letter-spacing: 0.1em;
+  margin-bottom: 20px;
+}
+.contact-heading {
+  font-size: clamp(40px, 6vw, 72px);
+  font-weight: 900;
+  background: linear-gradient(135deg, #e2e8f0, var(--teal), #818cf8);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  line-height: 1.1;
+  letter-spacing: -2px;
+  margin-bottom: 24px;
+}
+.contact-body {
+  color: var(--slate);
+  max-width: 500px;
+  font-size: 16px;
+  line-height: 1.8;
+  margin-bottom: 40px;
+}
+.contact-buttons { display: flex; gap: 16px; flex-wrap: wrap; justify-content: center; margin-bottom: 40px; }
+.contact-social { display: flex; gap: 24px; }
+.contact-social a {
+  color: var(--slate-dim);
+  font-size: 22px;
+  transition: all var(--transition);
+}
+.contact-social a:hover { color: var(--teal); transform: translateY(-4px); }
+
+/* ===========================
+   FOOTER
+=========================== */
+footer {
+  text-align: center;
+  padding: 32px 0 48px;
+  border-top: 1px solid var(--navy-light);
+}
+footer p { font-size: 12px; color: var(--slate-dim); }
+footer p span { color: var(--teal); }
+.footer-sub { font-size: 11px; margin-top: 4px; opacity: 0.6; }
+
+/* ===========================
+   MOBILE HEADER
+=========================== */
+#mobile-header {
+  display: none;
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  height: 64px;
+  background: rgba(15,23,42,0.95);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--navy-light);
+  z-index: 100;
+  padding: 0 24px;
+  align-items: center;
+  justify-content: space-between;
+}
+.mobile-logo {
+  font-family: var(--font-mono);
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--teal);
+}
+#hamburger {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  padding: 8px;
+}
+#hamburger span {
+  display: block;
+  width: 24px;
+  height: 2px;
+  background: var(--teal);
+  border-radius: 2px;
+  transition: all 0.3s ease;
+}
+#hamburger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+#hamburger.open span:nth-child(2) { opacity: 0; }
+#hamburger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
+#mobile-overlay {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.5);
+  z-index: 200;
+}
+#mobile-nav {
+  display: none;
+  position: fixed;
+  top: 0; right: 0;
+  width: min(280px, 75vw);
+  height: 100%;
+  background: #112240;
+  z-index: 300;
+  padding: 80px 32px 48px;
+  flex-direction: column;
+  gap: 40px;
+  transform: translateX(100%);
+  transition: transform 0.4s cubic-bezier(0.4,0,0.2,1);
+}
+#mobile-nav.open { transform: translateX(0); display: flex; }
+#mobile-nav ol { display: flex; flex-direction: column; gap: 12px; counter-reset: item; }
+#mobile-nav li { }
+#mobile-nav a {
+  font-family: var(--font-mono);
+  font-size: 16px;
+  color: var(--white);
+  display: block;
+  padding: 8px 0;
+  transition: color var(--transition);
+}
+#mobile-nav a span { color: var(--teal); margin-right: 8px; font-size: 13px; }
+#mobile-nav a:hover { color: var(--teal); }
+
+/* ===========================
+   RESPONSIVE
+=========================== */
+@media (max-width: 1200px) {
+  :root { --panel-w: 280px; }
+  #right-panel { padding: 0 48px; }
+}
+@media (max-width: 900px) {
+  #mobile-header { display: flex; }
+  #app { flex-direction: column; }
+  #left-panel { display: none; }
+  #right-panel { padding: 80px 32px 32px; }
+  #mobile-nav { display: flex; }
+  #mobile-overlay { display: none; }
+  #mobile-overlay.open { display: block; }
+  .about-grid { grid-template-columns: 1fr; }
+  .about-image-wrapper { max-width: 300px; margin: 0 auto; }
+  .featured-project, .featured-project.reverse {
+    grid-template-columns: 1fr;
+  }
+  .featured-project.reverse .fp-image-wrap,
+  .featured-project.reverse .fp-content {
+    grid-column: 1;
+    grid-row: auto;
+  }
+  .fp-content.right, .fp-content.left { text-align: left; }
+  .fp-content.right .fp-links,
+  .fp-content.right .fp-tech { justify-content: flex-start; }
+  .awards-grid { grid-template-columns: 1fr; }
+  .exp-tabs { flex-direction: column; }
+  .exp-tab-btns { flex-direction: row; flex-wrap: wrap; border-left: none; border-bottom: 2px solid var(--navy-light); }
+  .exp-tab-btn { border-left: none; border-bottom: 2px solid transparent; margin-left: 0; margin-bottom: -2px; }
+  .exp-tab-btn.active { border-left: none; border-bottom-color: var(--teal); }
+  .exp-tab-panels { padding-left: 0; padding-top: 24px; }
+  .hero-stats { gap: 24px; }
+  .stat-item::after { display: none; }
+  .other-projects-grid { grid-template-columns: 1fr 1fr; }
+}
+@media (max-width: 600px) {
+  #right-panel { padding: 72px 20px 24px; }
+  .other-projects-grid { grid-template-columns: 1fr; }
+  .hero-buttons { flex-direction: column; }
+  .hero-buttons .btn-primary,
+  .hero-buttons .btn-hire,
+  .hero-buttons .btn-outline { width: 100%; justify-content: center; }
+  .testimonial-card { padding: 28px 24px; }
+}
+</style>
+
+<script>
+/* ===========================
+   CURSOR GLOW
+=========================== */
+const glow = document.getElementById('cursor-glow');
+document.addEventListener('mousemove', e => {
+  glow.style.left = e.clientX + 'px';
+  glow.style.top  = e.clientY + 'px';
+});
+
+/* ===========================
+   SCROLL PROGRESS
+=========================== */
+const progressBar = document.getElementById('scroll-progress');
+const rightPanel = document.getElementById('right-panel');
+
+rightPanel.addEventListener('scroll', updateProgress);
+window.addEventListener('scroll', updateProgress);
+
+function updateProgress() {
+  const el = rightPanel.scrollHeight > window.innerHeight ? rightPanel : document.documentElement;
+  const scrolled = el.scrollTop || window.scrollY;
+  const total    = el.scrollHeight - el.clientHeight;
+  progressBar.style.width = (scrolled / total * 100) + '%';
+}
+
+/* ===========================
+   ACTIVE NAV via IntersectionObserver
+=========================== */
+const sections = document.querySelectorAll('section[id]');
+const navLinks  = document.querySelectorAll('.nav-link');
+
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      navLinks.forEach(l => l.classList.remove('active'));
+      const active = document.querySelector(`.nav-link[data-section="${entry.target.id}"]`);
+      if (active) active.classList.add('active');
+    }
+  });
+}, { root: null, rootMargin: '-40% 0px -50% 0px', threshold: 0 });
+
+sections.forEach(s => observer.observe(s));
+
+/* ===========================
+   EXPERIENCE TABS
+=========================== */
+document.querySelectorAll('.exp-tab-btn').forEach(btn => {
+  btn.addEventListener('click', () => {
+    const i = btn.dataset.tab;
+    document.querySelectorAll('.exp-tab-btn').forEach(b => b.classList.remove('active'));
+    document.querySelectorAll('.exp-panel').forEach(p => p.classList.remove('active'));
+    btn.classList.add('active');
+    document.querySelectorAll('.exp-panel')[i].classList.add('active');
+  });
+});
+
+/* ===========================
+   CASE STUDY TABS
+=========================== */
+document.querySelectorAll('.cs-tab-btn').forEach(btn => {
+  btn.addEventListener('click', () => {
+    const i = btn.dataset.cs;
+    document.querySelectorAll('.cs-tab-btn').forEach(b => b.classList.remove('active'));
+    document.querySelectorAll('.cs-panel').forEach(p => p.classList.remove('active'));
+    btn.classList.add('active');
+    document.querySelectorAll('.cs-panel')[i].classList.add('active');
+  });
+});
+
+/* ===========================
+   SHOW MORE PROJECTS
+=========================== */
+function toggleMoreProjects() {
+  const grid     = document.getElementById('other-grid');
+  const btn      = document.getElementById('show-more-btn');
+  const expanded = grid.classList.toggle('expanded');
+  btn.classList.toggle('expanded', expanded);
+  btn.innerHTML = expanded
+    ? '<i class="fas fa-grip-horizontal"></i> Show Less <span class="btn-icon"><i class="fas fa-chevron-down"></i></span>'
+    : '<i class="fas fa-grip-horizontal"></i> Show More <span class="btn-icon"><i class="fas fa-chevron-down"></i></span>';
+}
+
+/* ===========================
+   TESTIMONIALS CAROUSEL
+=========================== */
+let tIdx = 0;
+const tCards = document.querySelectorAll('.testimonial-card');
+const tTrack = document.getElementById('tTrack');
+const tDotsEl = document.getElementById('tDots');
+
+tCards.forEach((_, i) => {
+  const dot = document.createElement('div');
+  dot.className = 't-dot' + (i === 0 ? ' active' : '');
+  dot.addEventListener('click', () => goToTestimonial(i));
+  tDotsEl.appendChild(dot);
+});
+
+function goToTestimonial(n) {
+  tIdx = (n + tCards.length) % tCards.length;
+  tTrack.style.transform = `translateX(-${tIdx * 100}%)`;
+  document.querySelectorAll('.t-dot').forEach((d, i) => d.classList.toggle('active', i === tIdx));
+}
+function nextTestimonial() { goToTestimonial(tIdx + 1); }
+function prevTestimonial() { goToTestimonial(tIdx - 1); }
+
+// Auto-advance every 5s
+setInterval(nextTestimonial, 5000);
+
+/* ===========================
+   ANIMATED STATS COUNTER
+=========================== */
+function animateCounters() {
+  document.querySelectorAll('.stat-num').forEach(el => {
+    const target = +el.dataset.target;
+    const duration = 1800;
+    const step = target / (duration / 16);
+    let current = 0;
+    const timer = setInterval(() => {
+      current += step;
+      if (current >= target) { current = target; clearInterval(timer); }
+      el.textContent = Math.floor(current);
+    }, 16);
+  });
+}
+
+/* ===========================
+   SKILL BARS ANIMATION
+=========================== */
+function animateSkillBars() {
+  document.querySelectorAll('.skill-bar-fill').forEach(el => {
+    el.style.width = el.dataset.width + '%';
+  });
+}
+
+/* ===========================
+   SCROLL-TRIGGERED ANIMATIONS
+=========================== */
+const animObserver = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if (!entry.isIntersecting) return;
+    const el = entry.target;
+    if (el.id === 'hero') animateCounters();
+    if (el.id === 'about') animateSkillBars();
+    el.classList.add('fade-in');
+    animObserver.unobserve(el);
+  });
+}, { threshold: 0.15 });
+
+document.querySelectorAll('section').forEach(s => animObserver.observe(s));
+
+/* ===========================
+   MOBILE MENU
+=========================== */
+function toggleMobileMenu() {
+  const ham = document.getElementById('hamburger');
+  const nav = document.getElementById('mobile-nav');
+  const ov  = document.getElementById('mobile-overlay');
+  ham.classList.toggle('open');
+  nav.classList.toggle('open');
+  ov.classList.toggle('open');
+  document.body.style.overflow = nav.classList.contains('open') ? 'hidden' : '';
+}
+function closeMobileMenu() {
+  document.getElementById('hamburger').classList.remove('open');
+  document.getElementById('mobile-nav').classList.remove('open');
+  document.getElementById('mobile-overlay').classList.remove('open');
+  document.body.style.overflow = '';
+}
+
+/* ===========================
+   SMOOTH SCROLL for anchor links
+=========================== */
+document.querySelectorAll('a[href^="#"]').forEach(a => {
+  a.addEventListener('click', e => {
+    const target = document.querySelector(a.getAttribute('href'));
+    if (target) {
+      e.preventDefault();
+      target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+  });
+});
+</script>
+
+<style>
+/* ===========================
+   FADE-IN ANIMATION on scroll
+=========================== */
+section {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.7s ease, transform 0.7s ease;
+}
+section.fade-in {
+  opacity: 1;
+  transform: translateY(0);
+}
+/* Hero always visible */
+#hero { opacity: 1; transform: none; }
+
+/* ===========================
+   FEATURED PROJECT HOVER GLOW
+=========================== */
+.featured-project:hover .fp-desc {
+  box-shadow: 0 20px 60px rgba(0,0,0,0.4), 0 0 30px var(--teal-glow);
+}
+
+/* ===========================
+   SECTION HEADINGS — animated line
+=========================== */
+@keyframes grow-line {
+  from { width: 0; }
+  to   { width: 200px; }
+}
+.section-heading { overflow: visible; }
+
+/* ===========================
+   TYPING CURSOR on hero role
+=========================== */
+.hero-sub::after {
+  content: '|';
+  color: var(--teal);
+  animation: blink 1s step-end infinite;
+  margin-left: 2px;
+}
+@keyframes blink {
+  0%,100% { opacity: 1; }
+  50%      { opacity: 0; }
+}
+
+/* ===========================
+   SELECTION COLOR
+=========================== */
+::selection { background: var(--teal-dim); color: var(--teal); }
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: var(--navy); }
+::-webkit-scrollbar-thumb { background: var(--navy-light); border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: var(--teal-dim); }
+</style>
+
+</body>
+</html>
