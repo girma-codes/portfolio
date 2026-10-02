@@ -4,6 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Girma Mengistu — Frontend Developer & UI/UX Designer</title>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Fira+Code:wght@300;400;500;600&display=swap" rel="stylesheet" />
@@ -79,7 +80,9 @@
 
     <!-- CTA Buttons -->
     <div class="left-cta">
-      <a href="#" class="btn-primary" download><i class="fas fa-download"></i> Download CV</a>
+     <a href="resume.pdf" download="Girma_Mengistu_CV.pdf" target="_blank" class="btn-primary">
+    <i class="fas fa-download"></i> Download CV
+</a>
       <a href="mailto:girma@example.com" class="btn-hire"><i class="fas fa-paper-plane"></i> Hire Me</a>
     </div>
 
@@ -103,7 +106,7 @@
         <div class="hero-buttons">
           <a href="#projects" class="btn-primary"><i class="fas fa-rocket"></i> View My Work</a>
           <a href="mailto:girma@example.com" class="btn-hire"><i class="fas fa-paper-plane"></i> Hire Me</a>
-          <a href="#" class="btn-outline" download><i class="fas fa-download"></i> Download CV</a>
+          <a href="resume.pdf" class="btn-outline" download><i class="fas fa-download"></i> Download CV</a>
         </div>
         <div class="hero-stats">
           <div class="stat-item">
@@ -163,7 +166,7 @@
         <div class="about-image-wrapper">
           <div class="about-img-frame">
             <img
-              src="C:\Users\Girma\Desktop\mike\photo_2026-07-12_02-55-53.jpg"
+              src="photo_2026-10-02_04-02-36.jpg"
               alt="Girma Mengistu"
               class="about-photo"
             />
@@ -427,10 +430,15 @@
         I'm currently open to new opportunities — whether it's a full-time role, a freelance project,
         or just a chat about ideas. My inbox is always open. I'll do my best to get back to you!
       </p>
-      <div class="contact-buttons">
-        <a href="mailto:girma.mengistu@example.com" class="btn-hire large"><i class="fas fa-paper-plane"></i> Say Hello</a>
-        <a href="#" class="btn-outline large" download><i class="fas fa-download"></i> Download CV</a>
-      </div>
+
+      <!-- EmailJS Contact Form -->
+      <form id="contact-form" style="width: 100%; max-width: 500px; display: flex; flex-direction: column; gap: 16px; margin-bottom: 40px;">
+        <input type="text" name="name" placeholder="(Your Name)" required style="padding: 14px; border-radius: var(--radius); border: 1px solid var(--navy-light); background: var(--navy-card); color: var(--white); font-family: inherit;">
+        <input type="email" name="email" placeholder="(Your Email)" required style="padding: 14px; border-radius: var(--radius); border: 1px solid var(--navy-light); background: var(--navy-card); color: var(--white); font-family: inherit;">
+        <textarea name="message" rows="5" placeholder="(Your Message)" required style="padding: 14px; border-radius: var(--radius); border: 1px solid var(--navy-light); background: var(--navy-card); color: var(--white); font-family: inherit; resize: vertical;"></textarea>
+        <button type="submit" class="btn-hire large" style="width: 100%; cursor: pointer;"><i class="fas fa-paper-plane"></i> Send Message</button>
+      </form>
+
       <div class="contact-social">
         <a href="https://github.com" target="_blank"><i class="fab fa-github"></i></a>
         <a href="https://linkedin.com" target="_blank"><i class="fab fa-linkedin-in"></i></a>
@@ -438,7 +446,6 @@
         <a href="https://dribbble.com" target="_blank"><i class="fab fa-dribbble"></i></a>
       </div>
     </section>
-
     <!-- Footer -->
     <footer>
       <p class="fira">Designed &amp; Built by <span>Girma Mengistu</span></p>
@@ -1788,6 +1795,27 @@ document.querySelectorAll('a[href^="#"]').forEach(a => {
       target.scrollIntoView({ behavior: 'smooth', block: 'start' });
     }
   });
+});
+/* ===========================
+   EMAILJS CONFIGURATION
+=========================== */
+(function(){
+    emailjs.init("kwXbbMGewT93Iaagf"); // የራስህን Public Key እዚህ አስገባ
+})();
+
+const contactForm = document.getElementById('contact-form');
+
+contactForm.addEventListener('submit', function(event) {
+    event.preventDefault();
+
+    emailjs.sendForm('service_ibz4a2o', 'template_hs1cpnf', this) // የራስህን Template ID እዚህ አስገባ
+        .then(function() {
+            alert('መልዕክቱ በተሳካ ሁኔታ ተልኳል! እናመሰግናለን።');
+            contactForm.reset();
+        }, function(error) {
+            alert('መልዕክቱን መላክ አልተቻለም, እባክዎ እንደገና ይሞክሩ።');
+            console.log('FAILED...', error);
+        });
 });
 </script>
 
